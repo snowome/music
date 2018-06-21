@@ -1,0 +1,31 @@
+<template>
+    <div class="loading">
+        <img width="24" height="24" src="./loading.gif" />
+        <p class="desc">{{title}}</p>
+    </div>
+</template>
+
+<script type="text/ecmascript-6">
+    export default {
+        props: {
+            title: {
+                type: String,
+                default: '正在输入...'
+            }
+        }
+    }
+</script>
+
+<style scoped lang="less" type="text/less" rel="stylesheet/less">
+    @import "~common/css/variable.less";
+    .loading {
+        width: 100%;
+        text-align: center;
+        img { display: inline-block; }
+        .desc {
+            line-height: 20px;
+            font-size: @font-size-small;
+            color: @color-text-l;
+        }
+    }
+</style>
